@@ -24,14 +24,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //You'll need a font for this
         Typeface cFont = Typeface.createFromAsset(getAssets(), "fonts/trans.ttf");
+
         p1Text = (TextView) findViewById(R.id.p1);
         p2Text = (TextView) findViewById(R.id.p2);
         TextView ng = (TextView) findViewById(R.id.textView6);
 
         //set font
-        ng.setTypeface(cFont);
+        if (ng != null) {
+            ng.setTypeface(cFont);
+        }
 
     }
 
